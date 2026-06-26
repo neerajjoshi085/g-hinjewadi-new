@@ -959,13 +959,12 @@ footer .discalimerdiv span.reamoredbtn {
     font-size: 12px;
     font-weight: 500;
 }
-
+.discalimerdiv {
+    border-top: 1px solid #ffffff7a;
+    border-bottom: 1px solid #ffffff7a;
+}
 .gtfdiv a {
     color: #fff;
-    display: block;
-    border-top: 1px solid #fff;
-    width: 100%;
-    text-align: center;
     padding: 10px 0;
     font-size: 12px;
     font-weight: 500;
