@@ -943,6 +943,33 @@ section.contact-section {
     width: 100%;
     padding: 15px;
 }
+footer {
+    background-color: var(--black-color);
+}
+
+footer .discalimerdiv p {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+footer .discalimerdiv span.reamoredbtn {
+    color: #d6b052;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.gtfdiv a {
+    color: #fff;
+    display: block;
+    border-top: 1px solid #fff;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+    font-weight: 500;
+}
 @media (max-width: 991px) {
     .hero-slider .right-area h1.project-name {
         font-size: 30px;

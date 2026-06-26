@@ -81,7 +81,11 @@ function removeActiveClasses() {
   });
 }
 
-
+$(".reamoredbtn").click(function () {
+    $(".moretext").slideToggle("slow");
+    if ($(this).text() == "Read More") $(this).text("Read Less")
+    else $(this).text("Read More");
+});
 
 
 function calculateWheel() {
