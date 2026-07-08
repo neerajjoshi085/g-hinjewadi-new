@@ -54,7 +54,7 @@ section.hero-slider .wrapper {
 
 section.hero-slider .left-area {
     width: 450px;
-    /* display: flex; */
+    display: flex;
 }
 
 .hero-slider .right-area .swiper-slide {

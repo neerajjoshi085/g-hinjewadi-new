@@ -12,21 +12,17 @@ const thumbSwiper = new Swiper(".thumb-swiper", {
   freeMode: true,
 });
 
-// const imageSwiper = new Swiper(".image-swiper", {
-//  direction: "vertical",
-//     centeredSlides: true,
-//     slidesPerView: "auto",
-//     spaceBetween: 0,
-//     speed: 1000,
-//     loop: true,
-//     mousewheel: true,
-//     thumbs: {
-//         swiper: thumbSwiper,
-//     },
-//     controller: {
-//     inverse: true,
-//     }
-// });
+const imageSwiper = new Swiper(".image-swiper", {
+    direction: "vertical",
+    centeredSlides: true,
+    slidesPerView: "auto",
+    spaceBetween: 0,
+    speed: 1000,
+    loop: true,
+    mousewheel: true,
+    slideToClickedSlide: true,
+    
+});
 
 const mainSwiper = new Swiper(".main-swiper", {
     direction: "vertical",
@@ -45,6 +41,7 @@ const mainSwiper = new Swiper(".main-swiper", {
 });
 // mainSwiper.controller.control = imageSwiper;
 // imageSwiper.controller.control = mainSwiper;
+// thumbSwiper.controller.control = mainSwiper;
 
 const banner = new Swiper('.banner', {
   loop: true,
