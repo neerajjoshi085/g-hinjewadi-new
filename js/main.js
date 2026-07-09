@@ -40,23 +40,23 @@ const mainSwiper = new Swiper(".main-swiper", {
   },
 });
 
-let syncing = false;
+// let syncing = false;
 
-function syncAll(source) {
-  if (syncing) return;
-  syncing = true;
+// function syncAll(source) {
+//   if (syncing) return;
+//   syncing = true;
 
-  const index = source.realIndex;
+//   const index = source.realIndex;
 
-  if (source !== imageSwiper) imageSwiper.slideToLoop(index);
-  if (source !== mainSwiper) mainSwiper.slideToLoop(index);
-  if (source !== thumbSwiper) thumbSwiper.slideToLoop(index);
+//   if (source !== imageSwiper) imageSwiper.slideToLoop(index);
+//   if (source !== mainSwiper) mainSwiper.slideToLoop(index);
+//   if (source !== thumbSwiper) thumbSwiper.slideToLoop(index);
 
-  requestAnimationFrame(() => syncing = false);
-}
+//   requestAnimationFrame(() => syncing = false);
+// }
 
-imageSwiper.on("slideChange", () => syncAll(imageSwiper));
-mainSwiper.on("slideChange", () => syncAll(mainSwiper));
+// imageSwiper.on("slideChange", () => syncAll(imageSwiper));
+// mainSwiper.on("slideChange", () => syncAll(mainSwiper));
 
 
 const banner = new Swiper('.banner', {
