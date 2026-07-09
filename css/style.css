@@ -921,7 +921,7 @@ section.contact-section {
     color: rgba(255, 255, 255, 0.4);
 }
 
-.form .form-body form input.form-control {
+.form .form-body input.form-control {
     font-size: 14px;
     color: #fff;
     padding: 15px;
@@ -929,18 +929,18 @@ section.contact-section {
     border: 1px solid #ffffff1a;
 }
 
-.form .form-body form input.form-control::placeholder {
+.form .form-body input.form-control::placeholder {
     color: #fff;
 }
 
-.form .form-body form .form-control:focus {
+.form .form-body .form-control:focus {
     background-color: #000000;
     border-color: #d6b052;
     outline: 0;
     box-shadow: 0 0 0 .25rem rgb(37 37 37 / 25%);
 }
 
-.form .form-body form .mb-2.form-check label {
+.form .form-body .mb-2.form-check label {
     font-size: 12px;
     color: #fff;
     opacity: 0.5;
