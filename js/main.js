@@ -13,35 +13,51 @@ const thumbSwiper = new Swiper(".thumb-swiper", {
 });
 
 const imageSwiper = new Swiper(".image-swiper", {
-    direction: "vertical",
-    centeredSlides: true,
-    slidesPerView: "auto",
-    spaceBetween: 0,
-    speed: 1000,
-    loop: true,
-    mousewheel: true,
-    slideToClickedSlide: true,
-    
+  direction: "vertical",
+  centeredSlides: true,
+  slidesPerView: "auto",
+  spaceBetween: 0,
+  speed: 1000,
+  loop: true,
+  mousewheel: true,
+  slideToClickedSlide: true,
+
 });
 
 const mainSwiper = new Swiper(".main-swiper", {
-    direction: "vertical",
-    centeredSlides: true,
-    slidesPerView: "auto",
-    spaceBetween: 0,
-    speed: 1000,
-    loop: true,
-    mousewheel: true,
-    thumbs: {
-        swiper: thumbSwiper,
-    },
-    controller: {
+  direction: "vertical",
+  centeredSlides: true,
+  slidesPerView: "auto",
+  spaceBetween: 0,
+  speed: 1000,
+  loop: true,
+  mousewheel: true,
+  thumbs: {
+    swiper: thumbSwiper,
+  },
+  controller: {
     inverse: true,
   },
 });
-// mainSwiper.controller.control = imageSwiper;
-// imageSwiper.controller.control = mainSwiper;
-// thumbSwiper.controller.control = mainSwiper;
+
+let syncing = false;
+
+function syncAll(source) {
+  if (syncing) return;
+  syncing = true;
+
+  const index = source.realIndex;
+
+  if (source !== imageSwiper) imageSwiper.slideToLoop(index);
+  if (source !== mainSwiper) mainSwiper.slideToLoop(index);
+  if (source !== thumbSwiper) thumbSwiper.slideToLoop(index);
+
+  requestAnimationFrame(() => syncing = false);
+}
+
+imageSwiper.on("slideChange", () => syncAll(imageSwiper));
+mainSwiper.on("slideChange", () => syncAll(mainSwiper));
+
 
 const banner = new Swiper('.banner', {
   loop: true,
@@ -79,51 +95,51 @@ function removeActiveClasses() {
 }
 
 $(".reamoredbtn").click(function () {
-    $(".moretext").slideToggle("slow");
-    if ($(this).text() == "Read More") $(this).text("Read Less")
-    else $(this).text("Read More");
+  $(".moretext").slideToggle("slow");
+  if ($(this).text() == "Read More") $(this).text("Read Less")
+  else $(this).text("Read More");
 });
 
 
 function calculateWheel() {
-    const slides = document.querySelectorAll(
-        '.thumb-swiper .swiper-slide'
-    );
+  const slides = document.querySelectorAll(
+    '.thumb-swiper .swiper-slide'
+  );
 
-    const active = thumbSwiper.activeIndex;
+  const active = thumbSwiper.activeIndex;
 
-    slides.forEach((slide, index) => {
+  slides.forEach((slide, index) => {
 
-        let diff = index - active;
+    let diff = index - active;
 
-        // Fix loop mode
-        const total = slides.length;
+    // Fix loop mode
+    const total = slides.length;
 
-        if (diff > total / 2) diff -= total;
-        if (diff < -total / 2) diff += total;
+    if (diff > total / 2) diff -= total;
+    if (diff < -total / 2) diff += total;
 
-        const abs = Math.abs(diff);
+    const abs = Math.abs(diff);
 
-        // Move cards toward left
-        const translateX = -(abs * abs * 12);
+    // Move cards toward left
+    const translateX = -(abs * abs * 12);
 
-        // Vertical spacing
-        const translateY = diff * 110;
+    // Vertical spacing
+    const translateY = diff * 110;
 
-        // Rotation
-        const rotate = diff * 12;
+    // Rotation
+    const rotate = diff * 12;
 
-        // Active card larger
-        const scale = abs === 0 ? 1 : 0.85;
+    // Active card larger
+    const scale = abs === 0 ? 1 : 0.85;
 
-        slide.style.transform = `
+    slide.style.transform = `
             translate(${translateX}px, ${translateY}px)
             rotate(${rotate}deg)
             scale(${scale})
         `;
 
-        slide.style.zIndex = 100 - abs;
-    });
+    slide.style.zIndex = 100 - abs;
+  });
 }
 
 thumbSwiper.on('setTranslate', calculateWheel);

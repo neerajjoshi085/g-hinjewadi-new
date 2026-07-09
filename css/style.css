@@ -20,6 +20,7 @@ header {
     width: 100%;
     z-index: 1;
 }
+
 .thumb-swiper {
     overflow: visible;
 }
@@ -29,7 +30,7 @@ header {
 }
 
 .thumb-swiper .swiper-slide {
-     position: absolute;
+    position: absolute;
     left: 25%;
     top: 45%;
     transition: transform 0.5s ease;
@@ -54,7 +55,7 @@ section.hero-slider .wrapper {
 
 section.hero-slider .left-area {
     width: 450px;
-    /* display: flex; */
+    display: flex;
 }
 
 .hero-slider .right-area .swiper-slide {
@@ -209,6 +210,7 @@ a.floating-icon.hide {
 }
 
 @keyframes bounce {
+
     0%,
     100% {
         animation-timing-function: cubic-bezier(.8, 0, 1, 1);
@@ -232,43 +234,52 @@ a.floating-icon.hide {
     border-right: 0;
     transition: border-right 0.7s;
 }
+
 .swiper.image-swiper .swiper-slide.swiper-slide-active.aqua img {
-  border-right: 5px solid #0ea5e9;
-   transition: border-right 0.7s;
+    border-right: 5px solid #0ea5e9;
+    transition: border-right 0.7s;
 }
+
 .swiper.image-swiper .swiper-slide.swiper-slide-active.gale img {
-  border-right: 5px solid #4f46e5;
-   transition: border-right 0.7s;
+    border-right: 5px solid #4f46e5;
+    transition: border-right 0.7s;
 }
+
 .swiper.image-swiper .swiper-slide.swiper-slide-active.greenfront img {
-  border-right: 5px solid #0d9488;
-   transition: border-right 0.7s;
+    border-right: 5px solid #0d9488;
+    transition: border-right 0.7s;
 }
+
 .swiper.image-swiper .swiper-slide.swiper-slide-active.everygreen img {
-  border-right: 5px solid #34d399;
-   transition: border-right 0.7s;
+    border-right: 5px solid #34d399;
+    transition: border-right 0.7s;
 }
+
 .swiper.image-swiper .swiper-slide.swiper-slide-active.emerald img {
-  border-right: 5px solid #d946ef;
-   transition: border-right 0.7s;
+    border-right: 5px solid #d946ef;
+    transition: border-right 0.7s;
 }
+
 .swiper.image-swiper .swiper-slide.swiper-slide-active.river img {
- border-right: 5px solid #14b8a6;
-  transition: border-right 0.7s;
+    border-right: 5px solid #14b8a6;
+    transition: border-right 0.7s;
 }
+
 .swiper.image-swiper .swiper-slide.swiper-slide-active.river img {
- border-right: 5px solid #f59e0b;
-  transition: border-right 0.7s;
+    border-right: 5px solid #f59e0b;
+    transition: border-right 0.7s;
 }
-.swiper.image-swiper .swiper-slide.swiper-slide-active{
+
+.swiper.image-swiper .swiper-slide.swiper-slide-active {
     opacity: 1;
-} 
+}
 
 .swiper.image-swiper .swiper-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 section.banner-section {
     position: relative;
     height: 100vh;
@@ -589,7 +600,7 @@ section.location {
 }
 
 .location-grid ul.location-grid-list {
-     display: flex;
+    display: flex;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -943,6 +954,7 @@ section.contact-section {
     width: 100%;
     padding: 15px;
 }
+
 footer {
     background-color: var(--black-color);
 }
@@ -959,10 +971,12 @@ footer .discalimerdiv span.reamoredbtn {
     font-size: 12px;
     font-weight: 500;
 }
+
 .discalimerdiv {
     border-top: 1px solid #ffffff7a;
     border-bottom: 1px solid #ffffff7a;
 }
+
 .gtfdiv a {
     color: #fff;
     padding: 10px 0;
@@ -970,168 +984,216 @@ footer .discalimerdiv span.reamoredbtn {
     font-weight: 500;
     text-decoration: none;
 }
+
 @media (max-width: 991px) {
     .hero-slider .right-area h1.project-name {
         font-size: 30px;
     }
+
     section.banner-section .swiper-slide .banner-content {
         padding-left: 50px;
     }
-    .item-desc{
+
+    .item-desc {
         height: auto;
     }
+
     .container {
         max-width: 100%;
     }
+
     .location-image {
         width: 90px;
         height: 90px;
     }
-    .location-grid ul.location-grid-list{
+
+    .location-grid ul.location-grid-list {
         gap: 70px 20px;
     }
+
     .location-grid ul.location-grid-list>li {
         width: calc(33.33% - 16px);
     }
 }
+
 @media (max-width: 768px) {
     section.banner-section .swiper-slide .banner-content h2 {
         font-size: 22px;
     }
+
     section.banner-section .swiper-slide .banner-content p {
         font-size: 10px;
     }
+
     section.banner-section .swiper-slide .banner-content a {
         font-size: 10px;
         padding: 8px 40px
     }
+
     section.banner-section .swiper-slide .banner-content {
         position: absolute;
         top: 90%;
         transform: translateY(-90%);
         padding-left: 20px;
     }
+
     section.banner-section {
         height: auto;
     }
+
     section.banner-section .swiper-slide img {
         height: 70vh;
     }
-    .deal-header h2, .location-header h3, .detail-section-header h3 {
+
+    .deal-header h2,
+    .location-header h3,
+    .detail-section-header h3 {
         font-size: 32px;
     }
+
     ul.nav li.nav-item .nav-link {
         font-size: 12px;
         padding: 10px;
         white-space: nowrap;
     }
+
     .deal-config ul li {
         font-size: 10px;
     }
+
     .deal-box {
         display: block;
     }
+
     .deal-detail {
         display: block;
         width: 100%;
     }
+
     .deal-image {
         width: 100%;
     }
+
     .deal-name {
         width: 100%;
     }
+
     .deal-content {
         width: 100%;
-       display: block;
+        display: block;
     }
+
     .deal-config {
         width: 100%;
-         display: block!important;
+        display: block !important;
     }
+
     .deal-overview {
         width: 100%;
-        display: block!important;
+        display: block !important;
     }
+
     .location-grid ul.location-grid-list {
         display: block;
     }
+
     .location-grid ul.location-grid-list>li {
         width: 100%;
         margin-bottom: 70px;
     }
+
     .location-grid ul.location-grid-list>li:last-child {
         margin-bottom: 0;
     }
-    section.location{
+
+    section.location {
         padding-bottom: 30px;
     }
-    section.detail-section{
+
+    section.detail-section {
         padding: 30px 0;
     }
-    .contact-detail h3{
+
+    .contact-detail h3 {
         font-size: 36px;
     }
+
     .form-header h4 {
         font-size: 20px;
     }
+
     .detail-section-list {
         display: block;
     }
-    .item-desc{
+
+    .item-desc {
         height: auto;
         padding: 25px 20px;
         margin-bottom: 10px;
     }
+
     .item-desc h3.rotate {
         position: relative;
         transform: none;
         top: 0;
         left: 0;
     }
-    .item-desc.active h3{
+
+    .item-desc.active h3 {
         font-size: 20px;
     }
+
     .item-desc-content p {
         font-size: 12px;
         line-height: 20px;
     }
+
     .item-desc.active .item-desc-content {
         margin-top: 100px;
     }
+
     .item-desc>svg {
         bottom: 25px;
         left: inherit;
         display: block;
         right: 20px;
     }
+
     .form {
         padding: 20px;
         margin-top: 30px;
     }
+
     .logo.float-end {
         float: none !important;
         text-align: center;
     }
+
     ul.USP-detail-list {
         padding: 10px 20px;
     }
+
     ul.USP-detail-list li h3 {
         font-size: 18px;
     }
+
     ul.USP-detail-list li span {
         font-size: 10px;
     }
+
     .register-btn a {
         padding: 10px 30px;
         border-radius: 10px;
         font-size: 10px;
     }
+
     .deal-overview p {
         font-size: 10px;
         margin-bottom: 15px;
     }
-    .deal-overview a, .deal-config a {
+
+    .deal-overview a,
+    .deal-config a {
         font-size: 10px;
         padding: 7px 30px;
         display: inline-block;
