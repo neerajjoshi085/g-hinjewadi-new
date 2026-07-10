@@ -53,6 +53,52 @@ const banner = new Swiper('.banner', {
 });
 
 
+
+const thumbSwiperMob = new Swiper(".thumb-swiper-mob", {
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+  slidesPerView: 1,
+    autoplay: {
+    delay: 3000,             
+    disableOnInteraction: false, 
+    pauseOnMouseEnter: true,    
+  },
+  spaceBetween: 0,
+  centeredSlides: false,
+  watchSlidesProgress: true,
+  slideToClickedSlide: true,
+  speed: 500,
+  loop: true,
+  freeMode: true,
+});
+
+
+const mainSliderMob = new Swiper(".main-slider-mob", {
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+   autoplay: {
+    delay: 3000,             
+    disableOnInteraction: false, 
+    pauseOnMouseEnter: true,    
+  },
+  slidesPerView: 1,
+  spaceBetween: 0,
+  centeredSlides: false,
+  watchSlidesProgress: true,
+  slideToClickedSlide: true,
+  speed: 500,
+  loop: true,
+  freeMode: true,
+  thumbs: {
+    swiper: thumbSwiperMob,
+  },
+});
+
+
 $(document).ready(function () {
   $(".deal-name a").click(function (e) {
     e.preventDefault();
@@ -131,26 +177,28 @@ thumbSwiper.on('slideChange', calculateWheel);
 calculateWheel();
 
 
+if ($(window).width() > 767){
+  console.log($(window).width());
+  $(function () {
 
-$(function () {
+  function stackCards() {
 
-    function stackCards() {
+    var scrollTop = $(window).scrollTop();
 
-        var scrollTop = $(window).scrollTop();
+    $('.deal-box-outer').each(function (index) {
 
-        $('.deal-box-outer').each(function (index) {
-
-            var card = $(this);
-            var cardTop = card.offset().top;
-            var trigger = cardTop - 80;
+      var card = $(this);
+      var cardTop = card.offset().top;
+      var trigger = cardTop - 80;
 
 
-        });
+    });
 
-    }
+  }
 
-    $(window).on('scroll resize', stackCards);
+  $(window).on('scroll resize', stackCards);
 
-    stackCards();
+  stackCards();
 
 });
+}
