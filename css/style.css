@@ -1048,7 +1048,64 @@ p.rera-text.text-center {
     font-size: 12px;
     color: #fff;
 }
+a.float-whatsaap {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    animation: float-whatsapp-pulse 1.8s ease-in-out infinite;
+}
 
+a.float-whatsaap:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+a.float-whatsaap img {
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+@keyframes float-whatsapp-pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45);
+    }
+    70% {
+        transform: scale(1.04);
+        box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+.mobile-bottom {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+    background: #000;
+    display: none;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.mobile-bottom a {
+    color: #ffff;
+    font-size: 12px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-right: 1px solid #fff;
+    text-align: center;
+    width: 33.33%;
+}
+.mobile-bottom a:last-child{
+    border-right: 0;
+}
 @media (max-width: 1400px) {
     section.hero-slider .left-area {
         width: 300px;
@@ -1089,6 +1146,12 @@ p.rera-text.text-center {
 }
 
 @media (max-width: 768px) {
+    a.float-whatsaap{
+        display: none;
+    }
+    .mobile-bottom{
+        display: flex;
+    }
     .deal-box-outer{
         position: relative;
     }
