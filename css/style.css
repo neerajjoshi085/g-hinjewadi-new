@@ -407,11 +407,15 @@ ul.nav li.nav-item .nav-link.active {
     background-color: var(--black-color);
     color: #fff;
 }
-
+.deal-box-container {
+    max-width: 1000px;
+    margin: auto;
+}
 .deal-box {
     display: flex;
     border-radius: 20px !important;
     /* border: 1px solid #e2e2e2; */
+    min-height: 250px;
 }
 
 .deal-detail {
@@ -428,7 +432,7 @@ ul.nav li.nav-item .nav-link.active {
 }
 
 .deal-image {
-    width: 50%;
+    width: 55%;
     position: relative;
     background-color: #ebebeb;
     padding: 10px;
@@ -452,7 +456,7 @@ ul.nav li.nav-item .nav-link.active {
 
 .deal-name {
     padding: 20px;
-    width: 50%;
+    width: 45%;
 }
 
 .deal-name p,
@@ -528,6 +532,11 @@ ul.nav li.nav-item .nav-link.active {
     border: 1px solid #e2e2e2;
     margin-bottom: 20px;
     position: relative;
+    position:sticky;
+    top:20px;
+    width:100%;
+    background-color:#fff;
+    transition:all .3s ease;
     overflow: hidden;
 }
 
@@ -1214,3 +1223,4 @@ label.invalid-data.existingCheck {
         display: inline-block;
     }
 }
+

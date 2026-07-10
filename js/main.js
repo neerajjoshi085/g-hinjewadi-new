@@ -1,5 +1,4 @@
 
-
 const thumbSwiper = new Swiper(".thumb-swiper", {
   direction: "vertical",
   slidesPerView: "auto",
@@ -133,4 +132,25 @@ calculateWheel();
 
 
 
+$(function () {
 
+    function stackCards() {
+
+        var scrollTop = $(window).scrollTop();
+
+        $('.deal-box-outer').each(function (index) {
+
+            var card = $(this);
+            var cardTop = card.offset().top;
+            var trigger = cardTop - 80;
+
+
+        });
+
+    }
+
+    $(window).on('scroll resize', stackCards);
+
+    stackCards();
+
+});
