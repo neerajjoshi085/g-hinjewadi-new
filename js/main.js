@@ -201,3 +201,9 @@ calculateWheel();
 
 });
 
+ $(document).ready(function () {
+    let time = 2000;
+    setTimeout(() => {
+        $("#exampleModal").modal("show");
+    }, time);
+});
