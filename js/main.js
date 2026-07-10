@@ -177,25 +177,23 @@ thumbSwiper.on('slideChange', calculateWheel);
 calculateWheel();
 
 
-$(function () {
+if ($(window).width() > 767){
+  console.log(  )
+  $(function () {
 
   function stackCards() {
 
-    if ($(window).width() <= 767) {
-      return;
-    }
-
     var scrollTop = $(window).scrollTop();
 
-    $('.deal-box-outer').each(function () {
+    $('.deal-box-outer').each(function (index) {
 
       var card = $(this);
       var cardTop = card.offset().top;
       var trigger = cardTop - 80;
 
-      // Your stacking code here
 
     });
+
   }
 
   $(window).on('scroll resize', stackCards);
@@ -203,3 +201,4 @@ $(function () {
   stackCards();
 
 });
+}
