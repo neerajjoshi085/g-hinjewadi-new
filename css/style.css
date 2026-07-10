@@ -97,13 +97,14 @@ section.hero-slider .left-area {
 
 .slide-usp {
     opacity: 0;
+     width: 600px;
     transition: opacity 0.7s;
 }
 
 .hero-slider .right-area .swiper-slide.swiper-slide-active .slide-usp {
     opacity: 1;
     transition: opacity 0.7s;
-    width: 600px;
+   
 }
 
 .slide-usp ul {
@@ -1042,6 +1043,14 @@ label.invalid-data.existingCheck {
     background: #000;
     border-radius: 20px;
     padding: 20px 10px;
+}
+@media (max-width: 1400px) {
+    section.hero-slider .left-area {
+        width: 300px;
+    }
+    .right-area{
+        width: calc(100% - 300px);
+    }
 }
 @media (max-width: 991px) {
     .hero-slider .right-area h1.project-name {
