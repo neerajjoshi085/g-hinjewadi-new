@@ -177,8 +177,7 @@ thumbSwiper.on('slideChange', calculateWheel);
 calculateWheel();
 
 
-if ($(window).width() > 767){
-  console.log(  )
+
   $(function () {
 
   function stackCards() {
@@ -201,4 +200,4 @@ if ($(window).width() > 767){
   stackCards();
 
 });
-}
+
