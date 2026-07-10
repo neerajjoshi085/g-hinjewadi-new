@@ -176,24 +176,26 @@ thumbSwiper.on('slideChange', calculateWheel);
 
 calculateWheel();
 
-
-if ($(window).width() > 767){
-  console.log($(window).width());
-  $(function () {
+$(function () {
 
   function stackCards() {
 
+    // Run only on desktop
+    if ($(window).width() <= 767) {
+      return;
+    }
+
     var scrollTop = $(window).scrollTop();
 
-    $('.deal-box-outer').each(function (index) {
+    $('.deal-box-outer').each(function () {
 
       var card = $(this);
       var cardTop = card.offset().top;
       var trigger = cardTop - 80;
 
+      // Your stacking code here
 
     });
-
   }
 
   $(window).on('scroll resize', stackCards);
@@ -201,4 +203,3 @@ if ($(window).width() > 767){
   stackCards();
 
 });
-}
