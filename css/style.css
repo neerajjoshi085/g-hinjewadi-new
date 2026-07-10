@@ -1075,6 +1075,9 @@ label.invalid-data.existingCheck {
 }
 
 @media (max-width: 768px) {
+    .deal-box-outer{
+        position: relative;
+    }
     section.banner-section .swiper-slide .banner-content h2 {
         font-size: 22px;
     }
@@ -1228,13 +1231,19 @@ label.invalid-data.existingCheck {
     }
 
     ul.USP-detail-list {
-        padding: 10px 20px;
+        padding: 10px;
     }
 
     ul.USP-detail-list li h3 {
-        font-size: 18px;
+        font-size: 16px;
     }
-
+    ul.USP-detail-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+ul.USP-detail-list li {
+    width: 50%;
+}
     ul.USP-detail-list li span {
         font-size: 10px;
     }
@@ -1399,5 +1408,24 @@ label.invalid-data.existingCheck {
 .main-slider-mob .slide-content  p.address {
     font-size: 14px;
     margin-bottom: 0;
+}
+ .section-title h2 {
+    font-size: 20px;
+}
+ .modal-form-inner .custom-btn {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #d6b052;
+    width: 100%;
+    padding: 8px 15px;
+}
+.form .form-body input.form-control, .modal-form-inner .form-control {
+    font-size: 12px;
+    color: #fff;
+    padding: 12px 15px;
+}
+.deal-config, .deal-overview, .deal-name{
+    padding: 10px;
 }
 }

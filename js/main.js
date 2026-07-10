@@ -176,11 +176,11 @@ thumbSwiper.on('slideChange', calculateWheel);
 
 calculateWheel();
 
+
 $(function () {
 
   function stackCards() {
 
-    // Run only on desktop
     if ($(window).width() <= 767) {
       return;
     }
