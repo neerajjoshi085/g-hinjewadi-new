@@ -1343,6 +1343,7 @@ ul.USP-detail-list li {
 
     .main-slider-mob .slide-usp {
         opacity: 1;
+        width: 100%;
     }
 
     .main-slider-mob .slide-usp ul {
