@@ -1044,6 +1044,11 @@ label.invalid-data.existingCheck {
     border-radius: 20px;
     padding: 20px 10px;
 }
+p.rera-text.text-center {
+    font-size: 12px;
+    color: #fff;
+}
+
 @media (max-width: 1400px) {
     section.hero-slider .left-area {
         width: 300px;
